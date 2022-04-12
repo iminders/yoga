@@ -4,18 +4,18 @@
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class yoga; }
+namespace Ui { class Yoga; }
 QT_END_NAMESPACE
 
-class yoga : public QMainWindow
+class Yoga : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    yoga(QWidget *parent = nullptr);
-    ~yoga();
+    Yoga(QWidget *parent = nullptr);
+    ~Yoga();
 
 private:
-    Ui::yoga *ui;
+    Ui::Yoga *ui;
 };
 #endif // YOGA_H

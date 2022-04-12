@@ -1,14 +1,14 @@
 #include "yoga.h"
-#include "./ui_yoga.h"
+#include "ui_yoga.h"
 
-yoga::yoga(QWidget *parent)
+Yoga::Yoga(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::yoga)
+    , ui(new Ui::Yoga)
 {
     ui->setupUi(this);
 }
 
-yoga::~yoga()
+Yoga::~Yoga()
 {
     delete ui;
 }
