@@ -11,19 +11,19 @@
 |![license-badge] |![release-badge] | ![download-badge]|![issues-badge]|
 
 [win-link]: https://github.com/iminders/yoga/actions/workflows/windows.yml "WindowsAction"
-[win-badge]: https://github.com/iminders/yoga/workflows/windows.yml/badge.svg  "Windows"
+[win-badge]: https://github.com/iminders/yoga/actions/workflows/windows.yml/badge.svg  "Windows"
 
 [ubuntu-link]: https://github.com/iminders/yoga/actions/workflows/ubuntu.yml "UbuntuAction"
-[ubuntu-badge]: https://github.com/iminders/yoga/workflows/ubuntu.yml/badge.svg "Ubuntu"
+[ubuntu-badge]: https://github.com/iminders/yoga/actions/workflows/ubuntu.yml/badge.svg "Ubuntu"
 
 [macos-link]: https://github.com/iminders/yoga/actions?query=action%3AMacOS "MacOSAction"
 [macos-badge]: https://github.com/iminders/yoga/actions/workflows/macos.yml/badge.svg "MacOS"
 
 [android-link]: https://github.com/iminders/yoga/actions/workflows/android.yml "AndroidAction"
-[android-badge]: https://github.com/iminders/yoga/workflows/android.yml/badge.svg "Android"
+[android-badge]: https://github.com/iminders/yoga/actions/workflows/android.yml/badge.svg "Android"
 
 [ios-link]: https://github.com/iminders/yoga/actions/workflows/ios.yml "IOSAction"
-[ios-badge]: https://github.com/iminders/yoga/workflows/ios.yml/badge.svg "IOS"
+[ios-badge]: https://github.com/iminders/yoga/actions/workflows/ios.yml/badge.svg "IOS"
 
 [release-link]: https://github.com/iminders/yoga/releases "Release status"
 [release-badge]: https://img.shields.io/github/release/iminders/yoga.svg?style=flat-square "Release status"
