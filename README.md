@@ -7,7 +7,7 @@
 | ![win-badge]  | ![ubuntu-badge]      | ![macos-badge] |![android-badge]   |![ios-badge]   |
 
 |[License][license-link]| [Release][release-link]|[Download][download-link]|[Issues][issues-link]|
-|-----------------|-----------------|-----------------|-----------------|-----------------|
+|-----------------|-----------------|-----------------|-----------------|
 |![license-badge] |![release-badge] | ![download-badge]|![issues-badge]|
 
 [win-link]: https://github.com/iminders/yoga/actions/workflows/windows.yml "WindowsAction"
@@ -26,7 +26,7 @@
 [ios-badge]: https://github.com/iminders/yoga/workflows/ios.yml/badge.svg "IOS"
 
 [release-link]: https://github.com/iminders/yoga/releases "Release status"
-[release-badge]: https://img.shields.io/github/release/minders/yoga.svg?style=flat-square "Release status"
+[release-badge]: https://img.shields.io/github/release/iminders/yoga.svg?style=flat-square "Release status"
 
 [download-link]: https://github.com/iminders/yoga/releases/latest "Download status"
 [download-badge]: https://img.shields.io/github/downloads/iminders/yoga/total.svg?style=flat-square "Download status"
