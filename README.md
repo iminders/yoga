@@ -16,7 +16,7 @@
 [ubuntu-link]: https://github.com/iminders/yoga/actions?query=workflow%3AUbuntu "UbuntuAction"
 [ubuntu-badge]: https://github.com/iminders/yoga/workflows/Ubuntu/badge.svg "Ubuntu"
 
-[macos-link]: https://github.com/iminders/yoga/actions?query=workflow%3AMacOS "MacOSAction"
+[macos-link]: https://github.com/iminders/yoga/actions?query=action%3AMacOS "MacOSAction"
 [macos-badge]: https://github.com/iminders/yoga/actions/workflows/macos.yml/badge.svg "MacOS"
 
 [android-link]: https://github.com/iminders/yoga/actions?query=workflow%3AAndroid "AndroidAction"
@@ -33,7 +33,6 @@
 
 [license-link]: https://github.com/iminders/yoga/blob/master/LICENSE "LICENSE"
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg "MIT"
-
 
 [issues-link]: https://github.com/iminders/yoga/issues "Issues"
 [issues-badge]: https://img.shields.io/badge/github-issues-red.svg?maxAge=60 "Issues"
