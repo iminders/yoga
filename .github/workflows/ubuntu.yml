@@ -53,7 +53,7 @@ jobs:
           chmod a+x linuxdeployqt
           mv linuxdeployqt /usr/local/bin/linuxdeployqt
           ls -l
-          linuxdeployqt bin/release/${{ env.targetSimpleName }} -appimage -verbose=2
+          linuxdeployqt bin/release/${{ env.targetSimpleName }} -appimage -verbose=1
           mv bin/release/${{ env.targetSimpleName }}.AppImage ${{ env.archiveName }}.AppImage
 
       - name: Upload Package
