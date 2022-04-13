@@ -48,9 +48,8 @@ jobs:
         env:
           archiveName: ${{ env.targetSimpleName }}_${{ matrix.os }}_${{ matrix.qt_ver }}
         run: |
-          mkdir appdir
-          cp bin/release/${{ env.targetSimpleName }} appdir
-          cd appdir
+          mkdir AppDir
+          cp bin/release/${{ env.targetSimpleName }} AppDir
           wget --no-verbose "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
           wget --no-verbose "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage"
           chmod +x linuxdeploy*.AppImage
