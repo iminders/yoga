@@ -16,7 +16,7 @@
 [ubuntu-link]: https://github.com/iminders/yoga/actions/workflows/ubuntu.yml "UbuntuAction"
 [ubuntu-badge]: https://github.com/iminders/yoga/actions/workflows/ubuntu.yml/badge.svg "Ubuntu"
 
-[macos-link]: https://github.com/iminders/yoga/actions?query=action%3AMacOS "MacOSAction"
+[macos-link]: https://github.com/iminders/yoga/actions/workflows/macos.yml "MacOSAction"
 [macos-badge]: https://github.com/iminders/yoga/actions/workflows/macos.yml/badge.svg "MacOS"
 
 [android-link]: https://github.com/iminders/yoga/actions/workflows/android.yml "AndroidAction"
