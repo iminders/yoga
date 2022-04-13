@@ -53,8 +53,8 @@ jobs:
           chmod a+x linuxdeployqt
           mv linuxdeployqt /usr/local/bin/linuxdeployqt
           ls -l
-          linuxdeployqt bin/release/${env:targetSimpleName} -appimage
-          mv bin/release/${env:archiveName}.AppImage ${env:archiveName}.AppImage
+          linuxdeployqt bin/release/${{ env.targetSimpleName }} -appimage
+          mv bin/release/${{ env.targetSimpleName }}.AppImage ${{ env:archiveName }}.AppImage
 
       - name: Upload Package
         uses: actions/upload-artifact@v2
