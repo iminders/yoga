@@ -50,6 +50,8 @@ jobs:
         run: |
           mkdir AppDir
           cp bin/release/${{ env.targetSimpleName }} AppDir
+          wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
+          chmod a+x linuxdeployqt
           linuxdeployqt --appdir AppDir --output appimage
 
       - name: Upload Package
