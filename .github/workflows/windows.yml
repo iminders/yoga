@@ -27,12 +27,7 @@ jobs:
             msvc_arch: x64
             qt_target: desktop
             qt_arch_install: msvc2019_64
-          # 6.2.2
-          - qt_ver: 6.2.2
-            qt_arch: win64_msvc2019_64
-            msvc_arch: x64
-            qt_target: desktop
-            qt_arch_install: msvc2019_64
+
     env:
       targetName: yoga.exe
       targetSimpleName: yoga
@@ -70,7 +65,7 @@ jobs:
       - name: package
         id: package
         env:
-          archiveName: ${{ env.targetSimpleName }}_${{ matrix.qt_arch }}_${{ matrix.qt_ver }}
+          archiveName: ${{ env.targetSimpleName }}_${{ matrix.qt_arch }}_${{ github.event.release.tag_name }}
           msvcArch: ${{ matrix.msvc_arch }}
         shell: pwsh
         run: |

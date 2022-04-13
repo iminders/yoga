@@ -66,7 +66,7 @@ jobs:
       - name: package
         id: package
         env:
-          archiveName: ${{ env.targetSimpleName }}_${{ matrix.qt_arch }}_${{ matrix.qt_ver }}
+          archiveName: ${{ env.targetSimpleName }}_${{ matrix.qt_arch }}_${{ github.event.release.tag_name }}
         shell: pwsh
         run: |
           & scripts\windows-mingw-publish.ps1 ${env:archiveName} ${env:targetName}
