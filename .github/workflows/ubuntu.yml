@@ -52,7 +52,6 @@ jobs:
           wget --no-verbose "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage"
           chmod +x linuxdeploy*.AppImage
           export EXTRA_QT_PLUGINS=svg
-          export LD_LIBRARY_PATH=/opt/Qt/${matrix.qt_ver}/gcc_64/lib:$PWD/AppDir/usr/lib
           export OUTPUT=${env:archiveName}.AppImage
           ./linuxdeploy-x86_64.AppImage bin/release/yoga --plugin qt -appimage -verbose=2
 
