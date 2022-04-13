@@ -25,7 +25,8 @@ jobs:
           - os: ubuntu-18.04
             qt_ver: 6.2.4
             qt_arch: gcc_64
-
+    env:
+      targetSimpleName: yoga
     steps:
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
@@ -41,3 +42,23 @@ jobs:
         run: |
           qmake
           make
+      # 打包
+      - name: Package
+        id: Package
+        env:
+          archiveName: ${{ env.targetSimpleName }}_Linux_${{ matrix.qt_ver }}
+        run: |
+          cp LICENSE* COPYING *md AppDir/
+          wget --no-verbose "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
+          wget --no-verbose "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage"
+          chmod +x linuxdeploy*.AppImage
+          export EXTRA_QT_PLUGINS=svg
+          export LD_LIBRARY_PATH=/opt/Qt/${matrix.qt_ver}/gcc_64/lib:$PWD/AppDir/usr/lib
+          export OUTPUT=${env:archiveName}.AppImage
+          ./linuxdeploy-x86_64.AppImage --appdir AppDir --plugin qt --output appimage
+
+      - name: Upload Package
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${env:archiveName}.AppImage
+          path: ${env:archiveName}.AppImage
