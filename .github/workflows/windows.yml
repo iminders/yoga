@@ -25,11 +25,13 @@ jobs:
           - qt_ver: 6.2.4
             qt_arch: win64_msvc2019_64
             msvc_arch: x64
+            qt_target: desktop
             qt_arch_install: msvc2019_64
           # 6.2.2
           - qt_ver: 6.2.2
             qt_arch: win64_msvc2019_64
             msvc_arch: x64
+            qt_target: desktop
             qt_arch_install: msvc2019_64
     env:
       targetName: yoga.exe
@@ -43,10 +45,10 @@ jobs:
           # Version of Qt to install
           version: ${{ matrix.qt_ver }}
           # Target platform for build
-          # target: ${{ matrix.qt_target }}
+          target: ${{ matrix.qt_target }}
           arch: ${{ matrix.qt_arch }}
           cached: "false"
-          aqtversion: "==2.1.0"
+          aqtversion: "==2.0.5"
       # 拉取代码
       - uses: actions/checkout@v2
         with:
