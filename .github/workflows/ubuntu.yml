@@ -51,7 +51,7 @@ jobs:
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
           chmod a+x linuxdeployqt
           export VERSION=${{ github.event.release.tag_name }}
-          ./linuxdeployqt bin/release/${{ env.targetSimpleName }} -appimage -verbose=1
+          ./linuxdeployqt bin/release/${{ env.targetSimpleName }}.desktop -appimage -verbose=1
           mv bin/release/default.desktop ${env:archiveName}.AppImage
 
       - name: Upload Package
