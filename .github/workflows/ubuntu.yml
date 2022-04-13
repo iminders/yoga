@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-18.04]
-        qt_ver: [5.15.2]
+        qt_ver: [5.9.9]
         qt_arch: [gcc_64]
 
     env:
@@ -47,7 +47,7 @@ jobs:
       - name: Package
         id: Package
         env:
-          archiveName: ${{ env.targetSimpleName }}_${{ matrix.os }}_${{ github.event.release.tag_name }}_${{ matrix.qt_ver }}
+          archiveName: ${{ env.targetSimpleName }}_${{ matrix.os }}_${{ github.event.release.tag_name }}
         run: |
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
           chmod a+x linuxdeployqt
