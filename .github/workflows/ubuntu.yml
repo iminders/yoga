@@ -46,7 +46,7 @@ jobs:
       - name: Package
         id: Package
         env:
-          archiveName: ${{ env.targetSimpleName }}_Linux_${{ matrix.qt_ver }}
+          archiveName: ${{ env.targetSimpleName }}_{matrix.os}_${{ matrix.qt_ver }}
         run: |
           cp LICENSE* COPYING *md AppDir/
           wget --no-verbose "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
