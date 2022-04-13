@@ -52,10 +52,11 @@ jobs:
           cp bin/release/${{ env.targetSimpleName }} AppDir/
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
           chmod a+x linuxdeployqt
+          mv linuxdeployqt /usr/local/bin/linuxdeployqt
           export VERSION=${{ github.event.release.tag_name }}
           cd AppDir
-          ../linuxdeployqt ${env:archiveName}.AppImage
-          ../linuxdeployqt ${env:archiveName}.AppImage -appimage -verbose=1
+          linuxdeployqt ${env:archiveName}.AppImage
+          linuxdeployqt ${env:archiveName}.AppImage -appimage -verbose=1
           mv AppDir/${env:archiveName}.AppImage ${env:archiveName}.AppImage
 
       - name: Upload Package
