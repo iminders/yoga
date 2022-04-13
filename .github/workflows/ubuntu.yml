@@ -48,11 +48,9 @@ jobs:
         env:
           archiveName: ${{ env.targetSimpleName }}_${{ matrix.os }}_${{ matrix.qt_ver }}
         run: |
-          mkdir AppDir
-          cp bin/release/${{ env.targetSimpleName }} AppDir
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
           chmod a+x linuxdeployqt
-          ./linuxdeployqt --appdir AppDir --output appimage
+          ./linuxdeployqt bin/release/${{ env.targetSimpleName }} -appimage -verbose=2
 
       - name: Upload Package
         uses: actions/upload-artifact@v2
