@@ -51,7 +51,7 @@ jobs:
           archiveName: ${{ env.targetSimpleName }}_${{ matrix.os }}_${{ github.event.release.tag_name }}
         run: |
           mkdir AppDir
-          ls -l /home/runner/work/yoga/Qt/${{ matrix.qt_ver }}/lib
+          ls -l /home/runner/work/yoga/Qt/${{ matrix.qt_ver }}
           export LD_LIBRARY_PATH=/home/runner/work/yoga/Qt/${{ matrix.qt_ver }}/lib:$LD_LIBRARY_PATH
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O /usr/local/bin/linuxdeployqt
           chmod a+x /usr/local/bin/linuxdeployqt
