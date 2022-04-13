@@ -34,7 +34,11 @@ jobs:
           version: ${{ matrix.qt_ver }}
           cached: "false"
       - name: ubuntu install GL library
-        run: sudo apt-get install -y libglew-dev libglfw3-dev
+        run: |
+          sudo apt update
+          sudo apt-get install -y libglew-dev libglfw3-dev
+          sudo apt install libgl1-mesa-dev libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libzstd-dev libcurl4-openssl-dev
+
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
