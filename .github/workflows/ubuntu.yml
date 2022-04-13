@@ -23,6 +23,7 @@ jobs:
 
     env:
       targetSimpleName: yoga
+
     steps:
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
@@ -46,19 +47,16 @@ jobs:
       - name: Package
         id: Package
         env:
-          archiveName: ${{ env.targetSimpleName }}_${{ matrix.os }}_${{ github.event.release.tag_name }}
+          archiveName: ${{ env.targetSimpleName }}_${{ matrix.os }}_${{ github.event.release.tag_name }}_${{ matrix.qt_ver }}
         run: |
-          mkdir AppDir
-          cp bin/release/${{ env.targetSimpleName }} AppDir/
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
           chmod a+x linuxdeployqt
           mv linuxdeployqt /usr/local/bin/linuxdeployqt
           linuxdeployqt -version
-          export VERSION=${{ github.event.release.tag_name }}
-          cd AppDir
-          linuxdeployqt ${env:archiveName}
+
+          linuxdeployqt bin/release/${env:archiveName} -appimage
           ls -l
-          mv AppDir/${env:archiveName}.AppImage ${env:archiveName}.AppImage
+          mv bin/release/${env:archiveName}.AppImage ${env:archiveName}.AppImage
 
       - name: Upload Package
         uses: actions/upload-artifact@v2
