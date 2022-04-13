@@ -49,7 +49,7 @@ jobs:
         run: |
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
           chmod a+x linuxdeployqt
-          ./linuxdeployqt bin/release/*.desktop -appimage -verbose=2
+          ./linuxdeployqt bin/release/${{ env.targetSimpleName }} -appimage -verbose=2
 
       - name: Upload Package
         uses: actions/upload-artifact@v2
