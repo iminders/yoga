@@ -54,7 +54,7 @@ jobs:
           mv linuxdeployqt /usr/local/bin/linuxdeployqt
           ls -l
           linuxdeployqt bin/release/${{ env.targetSimpleName }} -appimage -verbose=2
-          mv bin/release/${{ env.targetSimpleName }}.AppImage ${{ env:archiveName }}.AppImage
+          mv bin/release/${{ env.targetSimpleName }}.AppImage ${{ env.archiveName }}.AppImage
 
       - name: Upload Package
         uses: actions/upload-artifact@v2
