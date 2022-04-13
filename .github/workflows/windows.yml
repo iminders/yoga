@@ -70,7 +70,7 @@ jobs:
       - name: package
         id: package
         env:
-          archiveName: ${{ env.targetSimpleName }}-${{ matrix.qt_arch }}_${{ matrix.qt_ver }}
+          archiveName: ${{ env.targetSimpleName }}_${{ matrix.qt_arch }}_${{ matrix.qt_ver }}
           msvcArch: ${{ matrix.msvc_arch }}
         shell: pwsh
         run: |
