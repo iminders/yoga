@@ -45,27 +45,27 @@ jobs:
         run: |
           qmake
           make
-      # 打包
-      - name: Package
-        id: Package
-        env:
-          archiveName: ${{ env.targetSimpleName }}_${{ matrix.os }}_${{ github.event.release.tag_name }}
-        run: |
-          mkdir AppDir
-          export LD_LIBRARY_PATH=/home/runner/work/yoga/Qt/${{ matrix.qt_ver }}/${{ matrix.qt_arch }}/lib:$LD_LIBRARY_PATH
-          export QT_PLUGIN_PATH=/home/runner/work/yoga/Qt/${{ matrix.qt_ver }}/${{ matrix.qt_arch }}/plugins:$QT_PLUGIN_PATH
-          export QML2_IMPORT_PATH=/home/runner/work/yoga/Qt/${{ matrix.qt_ver }}/${{ matrix.qt_arch }}/qml:$QML2_IMPORT_PATH
-          wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O /usr/local/bin/linuxdeployqt
-          chmod a+x /usr/local/bin/linuxdeployqt
-          cp bin/release/${{ env.targetSimpleName }} AppDir/
-          cd AppDir
-          linuxdeployqt ${{ env.targetSimpleName }} -appimage -always-overwrite -verbose=1
-          cd ..
-          ls -l AppDir
-          mv AppDir/${{ env.targetSimpleName }}.AppImage ${{ env.archiveName }}.AppImage
+      # 打包 TODO
+      # - name: Package
+      #   id: Package
+      #   env:
+      #     archiveName: ${{ env.targetSimpleName }}_${{ matrix.os }}_${{ github.event.release.tag_name }}
+      #   run: |
+      #     mkdir AppDir
+      #     export LD_LIBRARY_PATH=/home/runner/work/yoga/Qt/${{ matrix.qt_ver }}/${{ matrix.qt_arch }}/lib:$LD_LIBRARY_PATH
+      #     export QT_PLUGIN_PATH=/home/runner/work/yoga/Qt/${{ matrix.qt_ver }}/${{ matrix.qt_arch }}/plugins:$QT_PLUGIN_PATH
+      #     export QML2_IMPORT_PATH=/home/runner/work/yoga/Qt/${{ matrix.qt_ver }}/${{ matrix.qt_arch }}/qml:$QML2_IMPORT_PATH
+      #     wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O /usr/local/bin/linuxdeployqt
+      #     chmod a+x /usr/local/bin/linuxdeployqt
+      #     cp bin/release/${{ env.targetSimpleName }} AppDir/
+      #     cd AppDir
+      #     linuxdeployqt ${{ env.targetSimpleName }} -appimage -always-overwrite -verbose=1
+      #     cd ..
+      #     ls -l AppDir
+      #     mv AppDir/${{ env.targetSimpleName }}.AppImage ${{ env.archiveName }}.AppImage
 
-      - name: Upload Package
-        uses: actions/upload-artifact@v2
-        with:
-          name: ${env:archiveName}.AppImage
-          path: ${env:archiveName}.AppImage
+      # - name: Upload Package
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: ${env:archiveName}.AppImage
+      #     path: ${env:archiveName}.AppImage
