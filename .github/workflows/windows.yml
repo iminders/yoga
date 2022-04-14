@@ -65,7 +65,7 @@ jobs:
       - name: package
         id: package
         env:
-          archiveName: ${{ env.targetSimpleName }}_${{ matrix.qt_arch }}_${GITHUB_REF#refs/tags/}
+          archiveName: ${{ env.targetSimpleName }}_${{ matrix.qt_arch }}
           msvcArch: ${{ matrix.msvc_arch }}
         shell: pwsh
         run: |
