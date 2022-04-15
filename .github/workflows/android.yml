@@ -50,6 +50,10 @@ jobs:
           target: ${{ matrix.qt_target }}
           # here need not arch
           # arch: ${{ matrix.qt_arch }}
+      - name: install dependences
+        run: |
+          sudo apt update
+          sudo apt-get install -y libeigen3-dev
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
