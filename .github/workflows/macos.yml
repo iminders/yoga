@@ -30,6 +30,7 @@ jobs:
           softwareupdate --all --install --force
           sudo xcode-select --print-path
           sudo xcode-select --switch /Library/Developer/CommandLineTools
+          brew install eigen boost
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
         with:

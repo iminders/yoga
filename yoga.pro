@@ -6,6 +6,7 @@ CONFIG += c++17
 
 TARGET= yoga
 
+INCLUDEPATH += /usr/local/include/eigen3
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
