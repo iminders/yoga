@@ -45,6 +45,17 @@ jobs:
           arch: ${{ matrix.qt_arch }}
           cached: "false"
           aqtversion: "==2.0.5"
+      - name: install dependences
+        uses: jrl-umi3218/github-actions/install-dependencies@master
+        with:
+          compiler: gcc
+          build-type: RelWithDebInfo
+          windows: |
+          github:
+            - path: eigenteam/eigen-git-mirror
+              ref: 3.3.7
+        run: |
+          brew install eigen
       # 拉取代码
       - uses: actions/checkout@v2
         with:
