@@ -10,7 +10,7 @@ TARGET= yoga
     INCLUDEPATH += /usr/local/include/eigen3
 }
 win32 {
-    INCLUDEPATH += /usr/local/include/eigen3
+    INCLUDEPATH += C:/devel/install/include/eigen3
 }
 
 # You can make your code fail to compile if it uses deprecated APIs.
