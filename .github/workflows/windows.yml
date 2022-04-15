@@ -54,8 +54,6 @@ jobs:
           github:
             - path: eigenteam/eigen-git-mirror
               ref: 3.3.7
-        run: |
-          brew install eigen
       # 拉取代码
       - uses: actions/checkout@v2
         with:
