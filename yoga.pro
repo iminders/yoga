@@ -6,17 +6,23 @@ CONFIG += c++17
 
 TARGET= yoga
 
+!win32 {
+    INCLUDEPATH += /usr/local/include/eigen3
+}
+win32 {
+    INCLUDEPATH += C:/devel/install/include/eigen3
+}
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    main.cpp \
-    yoga.cpp
+    src/main.cpp \
+    src/yoga.cpp
 
 HEADERS += \
-    yoga.h
+    src/yoga.h
 
 FORMS += \
     yoga.ui

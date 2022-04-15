@@ -30,6 +30,9 @@ jobs:
           softwareupdate --all --install --force
           sudo xcode-select --print-path
           sudo xcode-select --switch /Library/Developer/CommandLineTools
+      - name: install dependences
+        run: |
+          brew install eigen
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
         with:

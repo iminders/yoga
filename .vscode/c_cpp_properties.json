@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${default}",
+                "/Users/liuwen/Qt/6.2.4/macos/lib/QtGui.framework/Versions/Current/Headers/**",
+                "/Users/liuwen/Qt/6.2.4/macos/lib/QtCore.framework/Versions/Current/Headers/**",
+                "/Users/liuwen/Qt/6.2.4/macos/lib/QtWidgets.framework/Versions/Current/Headers/**",
+                "/usr/local/include/eigen3"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Users/liuwen/Qt/6.2.4/macos/lib"
+            ],
+            "compilerPath": "/opt/local/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "macos-gcc-x64",
+            "browse": {
+                "path": [
+                    "/Users/liuwen/Qt/6.2.4/macos/lib"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "mergeConfigurations": false
+        }
+    ],
+    "version": 4
+}
