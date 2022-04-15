@@ -36,3 +36,7 @@
 
 [issues-link]: https://github.com/iminders/yoga/issues "Issues"
 [issues-badge]: https://img.shields.io/badge/github-issues-red.svg?maxAge=60 "Issues"
+
+
+
+[![Windows](https://github.com/iminders/yoga/actions/workflows/windows.yml/badge.svg)](https://github.com/iminders/yoga/actions/workflows/windows.yml)
