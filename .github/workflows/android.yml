@@ -54,6 +54,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt-get install -y libeigen3-dev
+          sudo ln -s /usr/include/eigen3 /usr/local/include/eigen3
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1

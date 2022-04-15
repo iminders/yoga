@@ -33,6 +33,8 @@ jobs:
       - name: ubuntu install library
         run: |
           sudo apt update
+          sudo apt-get install -y libeigen3-dev
+          sudo ln -s /usr/include/eigen3 /usr/local/include/eigen3
           sudo apt-get install -y patchelf libeigen3-dev
           sudo apt-get install -y libglew-dev libglfw3-dev libgtk2.0-dev libgstreamer-plugins-base1.0-0 libspeechd-dev libspeechd2
           sudo apt-get install -y libqt5quickcontrols2-5 libqt5multimedia5 libqt5webengine5 libqt5quick5 libqt5qml5
