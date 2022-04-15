@@ -37,6 +37,15 @@ jobs:
           arch: ${{ matrix.qt_arch }}
           tools: ${{ matrix.qt_tools }}
           cached: "false"
+      - name: install dependences
+        uses: jrl-umi3218/github-actions/install-dependencies@master
+        with:
+          compiler: gcc
+          build-type: RelWithDebInfo
+          windows: |
+            github:
+              - path: eigenteam/eigen-git-mirror
+                ref: 3.3.7
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
