@@ -22,7 +22,10 @@ SOURCES += \
     src/yoga.cpp
 
 HEADERS += \
-    src/yoga.h
+    src/yoga.h \
+    src/net/config.h \
+    src/net/network.h \
+    src/net/rng.h
 
 FORMS += \
     yoga.ui

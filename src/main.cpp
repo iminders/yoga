@@ -1,3 +1,4 @@
+#include "net/network.h"
 #include "yoga.h"
 #include <Eigen/Dense>
 #include <QApplication>
@@ -6,8 +7,10 @@
 #include <iostream>
 
 using Eigen::MatrixXd;
+using net::Network;
 
-static std::string ToString(const Eigen::MatrixXd &mat)
+static std::string
+ToString(const Eigen::MatrixXd &mat)
 {
     std::stringstream ss;
     ss << mat;
@@ -35,6 +38,8 @@ int main(int argc, char *argv[])
     lab.setText(qstr);
     //程序运行后，文本框显示
     lab.show();
+    Network testNet;
+    std::cout << "num_layers:" << testNet.num_layers() << "\n";
     w.show();
     return a.exec();
 }
