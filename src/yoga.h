@@ -4,7 +4,10 @@
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class Yoga; }
+namespace Ui
+{
+    class Yoga;
+}
 QT_END_NAMESPACE
 
 class Yoga : public QMainWindow

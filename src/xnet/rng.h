@@ -2,7 +2,7 @@
 #define RNG_H_
 
 #include "config.h"
-namespace net
+namespace xnet
 {
 
     class RNG

@@ -1,7 +1,7 @@
 #ifndef CONFIG_H_
 #define CONFIG_H_
 
-namespace net
+namespace xnet
 {
 
 // Floating-point number type

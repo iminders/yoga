@@ -4,7 +4,7 @@
 #include "config.h"
 #include <Eigen/Core>
 
-namespace net
+namespace xnet
 {
 
     ///
@@ -45,6 +45,6 @@ namespace net
         virtual void update(ConstAlignedMapVec &dvec, AlignedMapVec &vec) = 0;
     };
 
-} // namespace net
+} // namespace xnet
 
 #endif /* OPTIMIZER_H_ */

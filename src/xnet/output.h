@@ -5,7 +5,7 @@
 #include <Eigen/Core>
 #include <stdexcept>
 
-namespace net
+namespace xnet
 {
 
     ///

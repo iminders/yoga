@@ -24,9 +24,13 @@ SOURCES += \
 
 HEADERS += \
     src/yoga.h \
-    src/net/config.h \
-    src/net/network.h \
-    src/net/rng.h
+    src/xnet/*.h \
+    src/xnet/activation/*.h \
+    src/xnet/callback/*.h \
+    src/xnet/layer/*.h \
+    src/xnet/optimizer/*.h \
+    src/xnet/output/*.h \
+    src/xnet/utils/*.h
 
 FORMS += \
     yoga.ui

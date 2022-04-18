@@ -8,7 +8,7 @@
 #include <map>
 #include <vector>
 
-namespace net
+namespace xnet
 {
 
     ///
@@ -183,6 +183,6 @@ namespace net
         virtual void fill_meta_info(MetaInfo &map, int index) const = 0;
     };
 
-} // namespace net
+} // namespace xnet
 
 #endif /* LAYER_H_ */
